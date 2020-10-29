@@ -24,10 +24,10 @@ function GetBookings(){
 
           let row = bookings.insertRow(bookings.rows.length);
           row.insertCell(0).innerHTML = aId;
-          row.innerHTML(1).innerHTML = aName;
-          row.innerHTML(2).innerHTML = aEmail;
-          row.innerHTML(3).innerHTML = aPax;
-          row.innerHTML(4).innerHTML =""; //Remarks
+          row.insertCell(1).innerHTML = aName;
+          row.insertCell(2).innerHTML = aEmail;
+          row.insertCell(3).innerHTML = aPax;
+          row.insertCell(4).innerHTML =""; //Remarks
           row.insertCell(5).innerHTML = "<button id='" +buttonId +"'>Delete</button><br />";
           
           bookingIds.push(buttonId);
