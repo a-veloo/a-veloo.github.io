@@ -22,16 +22,19 @@ function BookNow(guestName,guestEmail,guestPax){
     .then(json => {
       // Do something with object
       console.log(json.booking);
-      document.getElementById("bookMsg").innerHTML = json.booking.name +" successfully added!";
-      GetBookings();
+      //document.getElementById("bookMsg").innerHTML = json.booking.name +" successfully added!";
+      //GetBookings();
     });
 }
 
-document.getElementById("bookNow").addEventListener("click", function(){
-    let name = document.getElementById("guestName");
-    let name = document.getElementById("guestEmail");
-    let name = document.getElementById("guestPax");
-    let remarks = document.getElementById("guestRemarks");
-
-    console.log(name +"," +email +"," +pax +"," +remarks);
+window.addEventListener("load", function(){
+    document.getElementById("bookNow").addEventListener("click", function(){
+        let name = document.getElementById("guestName");
+        let email = document.getElementById("guestEmail");
+        let pax = document.getElementById("guestPax");
+        let remarks = document.getElementById("guestRemarks");
+    
+        console.log(name +"," +email +"," +pax +"," +remarks);
+    });
 });
+
