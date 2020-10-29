@@ -1,4 +1,4 @@
-function BookNow(guestName,guestEmail,guestPax){
+function BookNow(guestName,guestEmail,guestPax,guestRemarks){
     let url = 'https://api.sheety.co/785e504f8ad8792780687397b8ec927c/bookingApp/bookings';
     
     let body = {
@@ -7,7 +7,8 @@ function BookNow(guestName,guestEmail,guestPax){
         //key:value pairs
         name:guestName,
         email:guestEmail,
-        pax:guestPax
+        pax:guestPax,
+        remarks:guestRemarks
       }
     }
     fetch(url, {
@@ -22,19 +23,18 @@ function BookNow(guestName,guestEmail,guestPax){
     .then(json => {
       // Do something with object
       console.log(json.booking);
-      //document.getElementById("bookMsg").innerHTML = json.booking.name +" successfully added!";
-      //GetBookings();
+      alert(json.booking.name +" successfully added!");
     });
 }
 
 window.addEventListener("load", function(){
     document.getElementById("bookNow").addEventListener("click", function(){
-        let name = document.getElementById("guestName");
-        let email = document.getElementById("guestEmail");
-        let pax = document.getElementById("guestPax");
-        let remarks = document.getElementById("guestRemarks");
+        let name = document.getElementById("guestName").value;
+        let email = document.getElementById("guestEmail").value;
+        let pax = document.getElementById("guestPax").value;
+        let remarks = document.getElementById("guestRemarks").value;
     
-        console.log(name +"," +email +"," +pax +"," +remarks);
+        BookNow(name,email,pax,remarks);
     });
 });
 
