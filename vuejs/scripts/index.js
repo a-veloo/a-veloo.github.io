@@ -11,6 +11,13 @@ var app2 = new Vue({
     data: {
         message: "You've loaded this page on " +new Date().toLocaleString() 
         linkURL: "https://www.google.co.nz"
-        LinkText: "Go to Google New Zealand"
+        linkText: "Go to Google New Zealand"
+    }
+});
+
+var app3 = new Vue({
+    el:"#app-3",
+    data:{
+        seen:true
     }
 });
