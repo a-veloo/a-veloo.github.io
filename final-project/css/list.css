@@ -1,0 +1,68 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  #logo{
+    max-height:42px;
+    margin-right:10px;
+    margin-top:-3px;
+    display:inline-block;
+  }
+  .navbar {
+    font-family: Raleway, sans-serif;
+  }
+  .navbar-brand {
+    font-weight:bold;
+  }
+  .h1,
+  .h2,
+  .h3,
+  .h4,
+  .h5,
+  .h6 {
+    font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+  #promo{
+    text-align:left;
+    padding:60px;
+    background-image: url("https://images.unsplash.com/photo-1600067367605-17c48d9c5236?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1951&q=80");
+    background-size:cover; 
+  }
+  /*limit to only small screen sizs - more room for text*/
+  @media (max-width: 991px){
+    #promo{
+      padding: 20px;
+    }
+  }
+  #promo .jumbotron{
+    border-radius:10px;
+    padding: 60px;
+    background-color: rgba(255,255,255,0.75);
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  /*limit to only small screen sizs - more room for text*/
+  @media (max-width: 991px){
+    #promo .jumbotron{
+      padding: 20px;
+    }
+  }
+  #promo .jumbotron h1{
+    font-weight:bold;
+    font-size:3.5em;
+    display:block;
+  }
+  .site-section{
+    text-align: center;
+    padding: 30px 0 50px;
+  }
+  .site-section h1{
+    font-weight: lighter;
+    margin-bottom:30px;
+    margin-top:20px;
+  }
+  #welcome p{
+    max-width:800px; 
+    font-size:20px;
+    margin: 0 auto;
+    color:#666;
+  }
